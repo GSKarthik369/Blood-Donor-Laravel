@@ -42,50 +42,50 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="donor-form">
+                    <form class="donor-form" id="donorForm" method="get" action="">
                         <div class="list-item">
                             <div class="item">
-                                <label>First Name:</label>
+                                <label for="full-name">Full Name:</label>
                             </div>
                             <div class="item">
-                                <input type="text" name="first-name">
+                                <input type="text" minlength="2" name="full-name" required>
                             </div>
                         </div>
                         <div class="list-item">
                             <div class="item">
-                                <label>Email:</label>
+                                <label for="email">Email:</label>
                             </div>
                             <div class="item">
-                                <input type="text" name="email">
-                            </div>
-                        </div>
-                        <div class="list-item">
-                            <div class="item">
-                                <label>Phone:</label>
-                            </div>
-                            <div class="item">
-                                <input type="text" name="mobile">
+                                <input type="email" name="email">
                             </div>
                         </div>
                         <div class="list-item">
                             <div class="item">
-                                <label>DOB:</label>
+                                <label for="mobile">Phone:</label>
+                            </div>
+                            <div class="item">
+                                <input type="number" maxlength="11" name="mobile" required>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item">
+                                <label for="dob">DOB:</label>
                             </div>
                             <div class="item l-align">
-                                <input type="date" name="dob">
+                                <input type="date" name="dob" required>
                             </div>
                         </div>
                         <div class="list-item">
                             <div class="item">
-                                <label>Location:</label>
+                                <label for="location">Location:</label>
                             </div>
                             <div class="item">
-                                <input type="text" name="location">
+                                <input type="text" name="location" required>
                             </div>
                         </div>
                         <div class="list-item">
                             <div class="item">
-                                <label>Last Donated Date:</label>
+                                <label for="l-date">Last Donated Date:</label>
                             </div>
                             <div class="item l-align">
                                 <div class="last-date-container">
@@ -108,7 +108,7 @@
                         </div>
                         <div class="list-item">
                             <div class="item">
-                                <label>Company:</label>
+                                <label for="company">Company:</label>
                             </div>
                             <div class="item">
                                 <input type="text" name="company">
@@ -116,7 +116,7 @@
                         </div>
                         <div class="list-item">
                             <div class="item">
-                                <label>Job Title:</label>
+                                <label for="job-title">Job Title:</label>
                             </div>
                             <div class="item">
                                 <input type="text" name="job-title">
@@ -195,6 +195,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+        <!-- <script src="js/jquery.validate.js"></script> -->
         <script>
             $(document).ready(function(){
                 var donors = [];
@@ -259,7 +261,7 @@
                 });
             });
 
-
+            $('#donorForm').validate();
         </script>
     </body>
 </html>
