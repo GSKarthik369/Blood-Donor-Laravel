@@ -1,0 +1,32 @@
+.main-container {
+    margin: 2vh 5vw;
+    border: 1px solid #c5c5c5;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #f7ffff;
+}
+
+.donor-form .list-item {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.donor-form .list-item .item {
+    text-align: left;
+}
+
+.donor-form .list-item .item.l-align {
+    width: 55%;
+}
+
+.last-date-container {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.last-date-container input {
+    max-width: 99px;
+}
